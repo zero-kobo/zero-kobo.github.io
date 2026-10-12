@@ -27,12 +27,19 @@
           "name": "こどもドリルらんど",
           "path": "kids-drill/",
           "desc": "たしざん・ひきざん・ひらがな・カタカナの無料ドリル。プリントの印刷もできます。",
-          "extra": ["tashizan.html", "hikizan.html", "hiragana.html", "katakana.html", "about.html", "privacy.html"]
+          "extra": [
+            "tashizan.html",
+            "hikizan.html",
+            "hiragana.html",
+            "katakana.html",
+            "about.html",
+            "privacy.html"
+          ]
         }
       ]
     },
     {
-      "title": "写真を変える",
+      "title": "写真・画像をつくる",
       "tools": [
         {
           "name": "写真から塗り絵",
@@ -43,6 +50,11 @@
           "name": "写真をドット絵に変換",
           "path": "dot-art/",
           "desc": "写真をファミコン風・ゲームボーイ風のドット絵にします。PNG保存とExcel出力もできます。"
+        },
+        {
+          "name": "LINEスタンプメーカー",
+          "path": "line-stamp-maker/",
+          "desc": "イラストの背景透過・文字入れ・まとめ画像の分割をして、LINEスタンプ申請用の画像一式をZIPで書き出します。"
         }
       ]
     },
