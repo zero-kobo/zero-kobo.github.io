@@ -21,12 +21,17 @@ VER = "20261011a"       # style.css を直したときに変える（ブラウ�
 # =======================
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E"
-           "%3Ctext y='.9em' font-size='90'%3E🔧%3C/text%3E%3C/svg%3E")
-
 
 def head(title, desc, url):
     ga = ""
+    # サイト名を検索結果に出すための構造化データ（トップページだけ）
+    site_ld = ""
+    if url == BASE_URL:
+        site_ld = ('<script type="application/ld+json">'
+                   + json.dumps({"@context": "https://schema.org", "@type": "WebSite",
+                                 "name": SITE_NAME, "alternateName": ["ちいさなツール工房 zero-kobo", "zero-kobo"],
+                                 "url": BASE_URL}, ensure_ascii=False)
+                   + '</script>\n')
     if GA_ID:
         ga = ('<!-- Google tag (GA4) -->\n'
               f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
@@ -48,8 +53,11 @@ def head(title, desc, url):
 <meta property="og:url" content="{url}">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{site_ld}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v={VER}">
