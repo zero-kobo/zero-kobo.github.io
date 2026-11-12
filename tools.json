@@ -59,11 +59,12 @@
         {
           "name": "こどもドリルらんど",
           "path": "kids-drill/",
-          "desc": "たしざん・ひきざん・九九・ひらがな・カタカナの無料ドリル。プリントの印刷もできます。",
+          "desc": "たしざん・ひきざん・九九・とけい・ひらがな・カタカナの無料ドリル。プリントの印刷もできます。",
           "extra": [
             "tashizan.html",
             "hikizan.html",
             "kuku.html",
+            "tokei.html",
             "hiragana.html",
             "katakana.html",
             "about.html",
